@@ -1,0 +1,12 @@
+Table 1 shows the classification performance on small YouTube dataset under 3 metrics, Micro-F1, Macro-F1 and Hamming Loss. With the training percentage increases, the Micro-F1 and
+Macro-F1 increase as well. The Micro-F1 get improved drastically when the training percentage increased from 0.01 to 0.15. However, there is no big difference for higher training
+percentage, i.e, 0.2, 0.25 and 0.3. As for Macro-F1, it shows a slightly difference. Macro-F1 increases as training percentage increases from 0.01 to 0.05, and then it keeps smooth til 0.2.
+When training percentage reaches 0.25 to 0.3, Macro-F1 experieces an significant improvement.For Hamming Loss, there is no much difference on training percentage being greater than 0.05. The increment of training percentage does boost the running time from 150s to 114s in a linear
+pattern.
+
+In order to get a sense of how good this algorithm is, I compare this algorithm, SCRN, with its original algorithm, wvRN. The main idea of
+this 2 algorithms are similar. They both use the neighbors' information to infer labels of unknown nodes. The main difference is that SCRN
+introduces social feature. The figures in Algorithm Performance show the comparison of SCRN and wvRN on 3 metrics and running time. For Hamming
+Loss, Macro-F1, Micro-F1, the SCRN performs slightly better than wvRN. However, the running time is significantly greater than wvRN. This
+result throws out a question, how to utilize the resource (memory, CPU, etc.). My solution is, althrough the SCRN is slightly better, when resources
+are limited and there is no need of higher accuracy, wvRN is still a good choice. 
